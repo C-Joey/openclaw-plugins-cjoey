@@ -1,0 +1,71 @@
+{
+  "id": "telegram-footer-plugin",
+  "name": "Telegram Footer Plugin",
+  "description": "Append a Telegram reply footer at send time using OpenClaw hooks, without patching dist bundles.",
+  "entry": "./index.js",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "enabled": {
+        "type": "boolean"
+      },
+      "channels": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "directOnly": {
+        "type": "boolean"
+      },
+      "separator": {
+        "type": "string"
+      },
+      "contextLimit": {
+        "type": "number",
+        "minimum": 1
+      },
+      "thinkingFallback": {
+        "type": "string"
+      },
+      "cacheTtlMs": {
+        "type": "integer",
+        "minimum": 1000
+      },
+      "debug": {
+        "type": "boolean"
+      }
+    }
+  },
+  "uiHints": {
+    "channels": {
+      "label": "Channels",
+      "help": "Target channels for footer injection. Defaults to [\"telegram\"]."
+    },
+    "directOnly": {
+      "label": "Direct chats only",
+      "help": "When enabled, skip Telegram chat ids that look like groups/channels (negative ids)."
+    },
+    "separator": {
+      "label": "Footer separator",
+      "help": "Line inserted above the compact footer."
+    },
+    "contextLimit": {
+      "label": "Context limit override",
+      "help": "Optional manual context-window limit when auto-detection cannot find one."
+    },
+    "thinkingFallback": {
+      "label": "Thinking fallback",
+      "help": "Used when the current thinking level cannot be inferred from session state."
+    },
+    "cacheTtlMs": {
+      "label": "Footer cache TTL (ms)",
+      "help": "How long to keep precomputed footer mappings between transcript write and outbound send."
+    },
+    "debug": {
+      "label": "Debug logging",
+      "help": "Emit plugin debug logs."
+    }
+  }
+}

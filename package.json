@@ -1,0 +1,10 @@
+{
+  "name": "telegram-footer-plugin",
+  "version": "0.1.0-alpha.1",
+  "description": "OpenClaw hook-only plugin that appends a compact Telegram reply footer without patching dist bundles.",
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ]
+  }
+}
