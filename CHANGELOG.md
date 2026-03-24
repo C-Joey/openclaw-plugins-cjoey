@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.0-alpha.2
+
+- Re-published from the dedicated public source repository `C-Joey/openclaw-plugins-cjoey`
+- Corrected ClawHub provenance metadata to point at the intended public plugin source repo
+
 ## 0.1.0-alpha.1
 
 - First public alpha release
